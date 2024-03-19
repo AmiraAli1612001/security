@@ -32,83 +32,84 @@ const Index = () => {
         // setPermanentOrTemporary={setPermanentOrTemporary}
         // drawerDir={drawerDir}
       />
-      <Box
-        className="video"
-        sx={{
-          overflow: "hidden",
-          position: "relative",
-          flexDirection: "column",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <video src={videos} autoPlay loop muted></video>
-        <Box className="layer"></Box>
-
-        <Box
-          sx={{
-            position: "absolute",
-            transform: "translateY(-50px)",
-            marginTop: { xs: "20px", lg: "0px" },
-          }}
-        >
-          <Typography variant="h1" color="initial">
-            {t("cyber-security")}
-          </Typography>
-          <Typography variant="h5" color="initial" sx={{ fontSize: "18px" }}>
-            {t("demy")}
-          </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "30px",
-              marginTop: "20px",
-            }}
-          >
-            <Link
-              to="/login"
-              style={{ transform: "translateY(-25%)", top: "-50%" }}
-            >
-              {t("create-account")}
-            </Link>
-            <Link to="/cyber-platform">{t("learn-more")}</Link>
-          </Box>
-        </Box>
+     <Box>
+       <Box
+         className="video"
+         sx={{
+           overflow: "hidden",
+           position: "relative",
+           flexDirection: "column",
+           display: "flex",
+           justifyContent: "center",
+           alignItems: "center",
+         }}
+       >
+         <video src={videos} autoPlay loop muted></video>
+         <Box className="layer"></Box>
+      
+         <Box
+           sx={{
+             position: "absolute",
+             transform: "translateY(-50px)",
+             marginTop: { xs: "20px", lg: "0px" },
+           }}
+         >
+           <Typography variant="h1" color="initial">
+             {t("cyber-security")}
+           </Typography>
+           <Typography variant="h5" color="initial" sx={{ fontSize: "18px" }}>
+             {t("demy")}
+           </Typography>
+           <Box
+             sx={{
+               display: "flex",
+               justifyContent: "center",
+               alignItems: "center",
+               gap: "30px",
+               marginTop: "20px",
+             }}
+           >
+             <Link
+               to="/login"
+             >
+               {t("create-account")}
+             </Link>
+             <Link   to="/cyber-platform">{t("learn-more")}</Link>
+           </Box>
+         </Box>
+       </Box>
+       {/* <Home/> */}
+       <Icons />
+       <Sections />
+       <Box
+         className="AI-bg"
+         sx={{
+           display: "flex",
+           justifyContent: "center",
+           flexDirection: "column",
+         }}
+       >
+         <Grid
+           container
+           sx={{ display: "flex", alignItems: "center", padding: "30px" }}
+         >
+           <Grid item x={9} lg={6}>
+             <p style={{ fontSize: "40px" }}>{t("why-robo")}</p>
+             <p className="p">{t("why-p-1")}</p>
+             <p className="p">{t("why-p-2")}</p>
+             <p className="p">{t("why-p-3")}</p>
+             <p className="p">{t("why-p-4")}</p>
+           </Grid>
+         </Grid>
+       </Box>
+       <Cyper />
+       <Roboways />
+       <Box className="about-image">
+         <CardMedia sx={{ margin: "auto" }} component="img" image={img} />
+       </Box>
+       <Footer />
       </Box>
-      {/* <Home/> */}
-      <Icons />
-      <Sections />
-      <Box
-        className="AI-bg"
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-        }}
-      >
-        <Grid
-          container
-          sx={{ display: "flex", alignItems: "center", padding: "30px" }}
-        >
-          <Grid item x={9} lg={6}>
-            <p style={{ fontSize: "40px" }}>{t("why-robo")}</p>
-            <p className="p">{t("why-p-1")}</p>
-            <p className="p">{t("why-p-2")}</p>
-            <p className="p">{t("why-p-3")}</p>
-            <p className="p">{t("why-p-4")}</p>
-          </Grid>
-        </Grid>
-      </Box>
-      <Cyper />
-      <Roboways />
-      <Box className="about-image">
-        <CardMedia sx={{ margin: "auto" }} component="img" image={img} />
-      </Box>
-      <Footer />
-    </Box>
+     </Box>
   );
 };
 

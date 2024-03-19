@@ -168,7 +168,7 @@ const Login = () => {
           </Box>
         </Box>
 
-        <iframe src="https://www.youtube.com/embed/w3brMT1HWSU" style={{border:"none"}}></iframe>
+        {/* <iframe src="https://www.youtube.com/embed/w3brMT1HWSU" style={{border:"none"}}></iframe> */}
         <p className="two">{t("login-two")}</p>
         <p className="two">
           <Link to="/portal">{t("login-terms-o")}</Link> {t("login-terms-m")}

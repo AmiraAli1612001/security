@@ -252,6 +252,9 @@
   font-weight: 400;
   color: white;
 }
+.css-146xcat {
+  width: 100% !important;
+}
 .video a:nth-child(1) , .blog .grid .left .item .two,
 .about-discover a:nth-child(1),
 .aboutBox a:nth-child(1),
@@ -1432,6 +1435,8 @@ position: absolute;
   width: 240px !important;
   right: 0px !important;
   transform: translateX(0vw) !important;
+  display: flex !important;
+  flex-direction: column !important;
 
 
 }

@@ -21,7 +21,7 @@ const Sections = () => {
       >
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: "400px", margin: "auto" }}
+            sx={{ width: {xs:"230px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgOne}
           />
@@ -75,7 +75,7 @@ const Sections = () => {
         </Grid>
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: "400px", margin: "auto" }}
+            sx={{ width: {xs:"230px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgTwo}
           />
@@ -95,7 +95,7 @@ const Sections = () => {
       >
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: "400px", margin: "auto" }}
+            sx={{ width: {xs:"230px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgOne}
           />
@@ -158,7 +158,7 @@ const Sections = () => {
         </Grid>
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: "400px", margin: "auto" }}
+            sx={{ width: {xs:"230px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgTwo}
           />
@@ -178,7 +178,7 @@ const Sections = () => {
       >
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: "400px", margin: "auto" }}
+            sx={{ width: {xs:"230px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgOne}
           />
@@ -234,7 +234,7 @@ const Sections = () => {
         </Grid>
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: "400px", margin: "auto" }}
+            sx={{ width: {xs:"230px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgTwo}
           />
@@ -253,7 +253,7 @@ const Sections = () => {
       >
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: "400px", margin: "auto" }}
+            sx={{ width: {xs:"230px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgOne}
           />
@@ -306,7 +306,7 @@ const Sections = () => {
         </Grid>
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: "400px", margin: "auto" }}
+            sx={{ width: {xs:"230px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgTwo}
           />

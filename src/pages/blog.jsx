@@ -82,26 +82,30 @@ const Blog = () => {
       <Grid
         container
         className="grid"
-        sx={{ alignItems: "center", justifyContent: "center" }}
+        sx={{display :"flex",  alignItems: "center", justifyContent: "center"}}
       >
         <Grid
           item
           className="left"
-          xs={10}
+          xs={12}
           md={9.5}
           sx={{
             position: "relative",
             transform: { xs: "translateY(-0px)", md: "translateY(-100px)" },
             display: "flex",
+            alignItems: "center", justifyContent: "center"
           }}
         >
           <Grid
             container
-            sx={{ display: "flex", justifyContent: "center", gap: "30px" }}
+            sx={{ display: "flex",
+            alignItems: "center", justifyContent: "center", gap: "30px" }}
           >
             {blog.map((item, index) => {
               return (
                 <Grid
+                sx={{ display: "flex",
+                alignItems: "center", justifyContent: "center" }}
                   item
                   key={index}
                   className="item"
