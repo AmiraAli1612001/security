@@ -18,7 +18,7 @@ body {
 
 /* drawer */
 .drawer .MuiButtonBase-root {
-    flex-grow: 0;
+    flex-grow: 0 !important;
   }
   
   .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root {

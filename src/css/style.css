@@ -791,7 +791,7 @@ sections */
   text-wrap: wrap;
 }
 .data h1 {
-  font-size: 45px;
+  /* font-size: 45px; */
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -946,7 +946,7 @@ sections */
   background-image: url("../assets/images/loginBack.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
   background-attachment: scroll;
   display: flex;
   align-items: center;
@@ -1257,7 +1257,7 @@ blog top */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  gap: 10px;
 }
 .blog .right  ul li , .blog .right h2  {
   color: white;
@@ -1568,4 +1568,57 @@ transition: 0.5s;
 .icons:hover a svg {
   fill: #663cb1 !important;
   transition: 0.5s !important;
+ }
+/*
+@media only screen and (max-width:992) {
+
+  .data h1 {
+    font-size: 34px !important;
+  }
+} */
+
+
+/* drawer */
+.drawer .MuiButtonBase-root {
+  flex-grow: 0 !important;
+}
+
+.css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root {
+  -webkit-flex-grow: 0 !important;
+  -ms-flex-positive: 0 !important;
+  flex-grow: 0 !important;
+}
+
+.MuiPaper-root::-webkit-scrollbar {
+  display: none;
+}
+
+.css-1drgtl0-MuiButtonBase-root-MuiIconButton-root:hover {
+  border-radius: 0px !important;
+}
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+  border-radius: 0px !important;
+}
+.css-1tny64w-MuiModal-root-MuiDrawer-root .MuiDrawer-paper ,.css-1xcehlr-MuiDrawer-docked .MuiDrawer-paper , .css-12axqwi-MuiModal-root-MuiDrawer-root .MuiDrawer-paper {
+  height: 100vh !important;
+}
+
+.css-1cxcwo2-MuiModal-root-MuiDrawer-root .MuiDrawer-paper {
+  background-color: #151b23 !important;
+}
+
+.css-1cxcwo2-MuiModal-root-MuiDrawer-root .MuiDrawer-paper  a {
+  color: white !important;
+  padding: 20px 40px !important;
+  text-decoration: none !important;
+  font-size: 13px !important;
+  font-weight: bold;
+  transition: 0.5s;
+
+}
+
+.css-1cxcwo2-MuiModal-root-MuiDrawer-root .MuiDrawer-paper  a:hover {
+  color:  #6f41c0 !important;
+  transition: 0.5s;
+
 }

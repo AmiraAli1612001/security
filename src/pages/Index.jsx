@@ -65,7 +65,7 @@ const Index = () => {
                display: "flex",
                justifyContent: "center",
                alignItems: "center",
-               gap: "30px",
+               gap: "10px",
                marginTop: "20px",
              }}
            >

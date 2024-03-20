@@ -63,9 +63,8 @@ const DefDrawer = (props) => {
     <Drawer
       className="drawer"
       variant="temporary"
-      //   anchor={drawerDirr}
+        anchor="left"
       smooth="true"
-      anchor="left"
       onClick={() => {
         props.setNoneOrBlock("none");
       }}
