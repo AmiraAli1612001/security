@@ -15,13 +15,13 @@ const Sections = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          padding: "100px 20px",
+          padding: {xs :"20px 10px",lg :"100px 0px"},
           alignItems: "center",
         }}
       >
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: {xs:"260px" , md:"400px"}, margin: "auto" }}
+            sx={{ width: {xs:"340px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgOne}
           />
@@ -42,7 +42,7 @@ const Sections = () => {
             {t("section-i")}
             <ins>{t("section-ins")}</ins>
           </i>
-          <Link to="/login">{t("create-account")}</Link>
+          <Link to="/login">{t("create-small")}</Link>
         </Grid>
       </Grid>
       <Grid
@@ -52,7 +52,7 @@ const Sections = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          padding: "100px 20px",
+          padding: {xs :"20px 10px",lg :"100px 0px"},
           alignItems: "center",
         }}
       >
@@ -71,11 +71,15 @@ const Sections = () => {
             {t("section-Defender-i")}
             <ins>{t("section-Defender-ins")}</ins>
           </i>
-          <Link to="/login">{t("create-account")}</Link>
+          <Link to="/login">{t("create-small")}</Link>
         </Grid>
-        <Grid item xs={10} md={5}>
+        <Grid item xs={10} md={5} sx={{display :"flex" , justifyContent :"center"  ,alignItems :"center"}}>
           <CardMedia
-            sx={{ width: {xs:"260px" , md:"400px"}, margin: "auto" }}
+            sx={{width: {xs:"340px" , md:"400px"}, margin: "auto" ,  
+            
+          display :{xs :"none" , md :"block"}
+            
+            }}
             component="img"
             image={imgTwo}
           />
@@ -89,13 +93,13 @@ const Sections = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          padding: "100px 20px",
+          padding: {xs :"20px 10px",lg :"100px 0px"},
           alignItems: "center",
         }}
       >
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: {xs:"260px" , md:"400px"}, margin: "auto" }}
+            sx={{ width: {xs:"340px" , md:"400px"}, margin: "auto"  }}
             component="img"
             image={imgOne}
           />
@@ -117,7 +121,7 @@ const Sections = () => {
             {t("section-Defender-i")}
             <ins>{t("section-Defender-ins")}</ins>
           </i>
-          <Link to="/login">{t("create-account")}</Link>
+          <Link to="/login">{t("create-small")}</Link>
         </Grid>
       </Grid>
 
@@ -128,7 +132,7 @@ const Sections = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          padding: "100px 20px",
+          padding: {xs :"20px 10px",lg :"100px 0px"},
           alignItems: "center",
         }}
       >
@@ -154,11 +158,15 @@ const Sections = () => {
 
             <ins> {t("section-update-ins")}</ins>
           </i>
-          <Link to="/login"> {t("create-account")}</Link>
+          <Link to="/login"> {t("create-small")}</Link>
         </Grid>
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: {xs:"260px" , md:"400px"}, margin: "auto" }}
+               sx={{ width: {xs:"340px" , md:"400px"}, margin: "auto" ,  
+            
+          display :{xs :"none" , md :"block"}
+            
+            }}
             component="img"
             image={imgTwo}
           />
@@ -172,13 +180,13 @@ const Sections = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          padding: "100px 20px",
+          padding: {xs :"20px 10px",lg :"100px 0px"},
           alignItems: "center",
         }}
       >
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: {xs:"260px" , md:"400px"}, margin: "auto" }}
+            sx={{ width: {xs:"340px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgOne}
           />
@@ -199,7 +207,7 @@ const Sections = () => {
 
             <ins> {t("section-update-ins")}</ins>
           </i>
-          <Link to="/login"> {t("create-account")}</Link>
+          <Link to="/login"> {t("create-small")}</Link>
         </Grid>
       </Grid>
       <Grid
@@ -209,7 +217,7 @@ const Sections = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          padding: "100px 20px",
+          padding: {xs :"20px 10px",lg :"100px 0px"},
           alignItems: "center",
         }}
       >
@@ -230,11 +238,14 @@ const Sections = () => {
 
             <ins>{t("section-MFA-ins")}</ins>
           </i>
-          <Link to="/login">{t("create-account")}</Link>
+          <Link to="/login">{t("create-small")}</Link>
         </Grid>
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: {xs:"260px" , md:"400px"}, margin: "auto" }}
+            sx={{ width: {xs:"340px" , md:"400px"}, margin: "auto" , 
+          display :{xs :"none" , md :"block"}
+            
+            }}
             component="img"
             image={imgTwo}
           />
@@ -247,13 +258,13 @@ const Sections = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          padding: "100px 20px",
+          padding: {xs :"20px 10px",lg :"100px 0px"},
           alignItems: "center",
         }}
       >
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: {xs:"260px" , md:"400px"}, margin: "auto" }}
+            sx={{ width: {xs:"340px" , md:"400px"}, margin: "auto" }}
             component="img"
             image={imgOne}
           />
@@ -273,7 +284,7 @@ const Sections = () => {
 
             <ins> {t("section-support-ins")}</ins>
           </i>
-          <Link to="/login">{t("create-account")}</Link>
+          <Link to="/login">{t("create-small")}</Link>
         </Grid>
       </Grid>
       <Grid
@@ -283,7 +294,8 @@ const Sections = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          padding: "100px 20px",
+          
+          padding: {xs :"20px 10px",lg :"100px 0px"},
           alignItems: "center",
         }}
       >
@@ -302,11 +314,15 @@ const Sections = () => {
             {t("section-heal-i")}
             <ins>{t("section-heal-ins")}</ins>
           </i>
-          <Link to="/login">{t("create-account")}</Link>
+          <Link to="/login">{t("create-small")}</Link>
         </Grid>
         <Grid item xs={10} md={5}>
           <CardMedia
-            sx={{ width: {xs:"260px" , md:"400px"}, margin: "auto" }}
+             sx={{ width: {xs:"300px" , md:"400px"}, margin: "auto",  
+            
+          display :{xs :"none" , md :"block"}
+            
+            }}
             component="img"
             image={imgTwo}
           />

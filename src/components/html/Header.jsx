@@ -22,7 +22,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useTranslation } from "react-i18next";
 
 const Header = (props) => {
+  let [lang , setLang] = useState(false)
+  // var dropdown = document.getElementById("dropdown")
   document.body.dir = window.localStorage.getItem("dir");
+  let [drop , setDrop] = useState(false)
   let [nav, setNav] = useState(false);
   window.onscroll = function () {
     if (window.scrollY > 10) {
@@ -109,19 +112,23 @@ const Header = (props) => {
                 <MenuIcon />
               </Button>
             </Grid>
-            <Grid item sx={{ display: { xs: "none", lg: "flex" } }}>
-              <Box className="menu">
+            <Grid  className="hed" item sx={{ display: { xs: "none", lg: "flex" } }}>
+              <Box className="menu" onClick={() => {
+                  setDrop(!drop)
+                
+              }}>
                 <Link
                   style={{
                     position: "relative",
                     display: "flex",
                     alignItems: "center",
                   }}
+                  
                 >
                   {t("products")}
                   <KeyboardArrowDownIcon />
                 </Link>
-                <Grid container className="dropdown">
+                <Grid container className="dropdown" id="dropdown" sx={{display : drop ? "flex":"none"}}>
                   {boxes.map((item) => {
                     return (
                       <Grid
@@ -233,9 +240,20 @@ const Header = (props) => {
                   </Link>
                 );
               })}
-              <Box className="lang">
+              
+
+              <Link to="/login" className="createA">
+                {t("create-account")}
+              </Link>
+            </Grid>
+            <Grid item>
+            <Box className="lang"  sx={{cursor :"pointer"}} onClick={() => {
+
+              setLang(!lang)
+              
+            }}>
                 <LanguageIcon className="icon" />
-                <Box className="drop">
+                <Box className="drop" sx={{display : lang ? "block" : "none"}}>
                   <p
                     onClick={() => {
                       i18n.changeLanguage("en");
@@ -250,7 +268,9 @@ const Header = (props) => {
                     onClick={() => {
                       i18n.changeLanguage("ar");
                       document.body.dir = "rtl";
+
                       window.localStorage.setItem("dir", "rtl");
+                      
                       window.location.reload()
 
                     }}
@@ -259,10 +279,6 @@ const Header = (props) => {
                   </p>
                 </Box>
               </Box>
-
-              <Link to="/login" className="createA">
-                {t("create-account")}
-              </Link>
             </Grid>
           </Grid>
         </Toolbar>

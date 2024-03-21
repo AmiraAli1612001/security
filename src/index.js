@@ -23,6 +23,7 @@ import Cookie from "./pages/cookie";
 import Carousel from "./components/html/Carousel";
 import Login from "./pages/login";
 import Blog from "./pages/blog";
+import Notfound from "./components/html/Notfound";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createHashRouter(
@@ -41,6 +42,8 @@ const router = createHashRouter(
       <Route path="c" element={<Carousel />} />
       <Route path="login" element={<Login />} />
       <Route path="blog" element={<Blog />} />
+      <Route path= "*" element={<Notfound />} />
+
     </Route>
   )
 );

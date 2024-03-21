@@ -142,16 +142,16 @@ const Login = () => {
               }}
             >
               <CardMedia component="img" image={email} />
-              <span>{t("login-email")}</span>
+              <span style={{margin:"0px 1px",textAlign : localStorage.getItem("i18nextLng") === "ar" ? "right"  :"left"}}>{t("login-email")}</span>
             </Button>
 
             <Button>
               <CardMedia component="img" image={google} />
-              <span>{t("login-google")}</span>
+              <span style={{margin:"0px 1px",textAlign : localStorage.getItem("i18nextLng") === "ar" ? "right"  :"left"}}>{t("login-google")}</span>
             </Button>
             <Button>
               <CardMedia component="img" image={micro} />
-              <span>{t("login-micro")}</span>
+              <span style={{margin:"0px 1px",textAlign : localStorage.getItem("i18nextLng") === "ar" ? "right"  :"left"}}>{t("login-micro")}</span>
             </Button>
 
             <p className="midp">

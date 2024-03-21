@@ -23,7 +23,7 @@ const Index = () => {
   let [noneOrBlock, setNoneOrBlock] = useState("none");
   // let [drawerDir, setdrawerDir] = useState("left");
   return (
-    <Box>
+    <Box >
       <Header setNoneOrBlock={setNoneOrBlock} />
       <DefDrawer
         noneOrBlock={noneOrBlock}
@@ -42,9 +42,10 @@ const Index = () => {
            display: "flex",
            justifyContent: "center",
            alignItems: "center",
+           height :"99.5vh"
          }}
        >
-         <video src={videos} autoPlay loop muted></video>
+         <video src={videos} autoPlay loop muted style={{objectFit :"cover"}}></video>
          <Box className="layer"></Box>
       
          <Box
@@ -65,14 +66,15 @@ const Index = () => {
                display: "flex",
                justifyContent: "center",
                alignItems: "center",
-               gap: "10px",
+               gap: "5px",
                marginTop: "20px",
              }}
            >
              <Link
                to="/login"
+               style={{textTransform :"capitalize"}}
              >
-               {t("create-account")}
+               {t("create-small")}
              </Link>
              <Link   to="/cyber-platform">{t("learn-more")}</Link>
            </Box>

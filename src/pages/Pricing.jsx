@@ -26,6 +26,8 @@ import Logindrawer from "./logindrawer";
 import { useTranslation } from "react-i18next";
 
 const Pricing = () => {
+  let [lang , setLang] = useState(false)
+
   let [PermanentOrTemporary, setPermanentOrTemporary] = useState("permanent");
   let [noneOrBlock, setNoneOrBlock] = useState("none");
   // let [drawerDir, setdrawerDir] = useState("left");
@@ -121,9 +123,13 @@ const Pricing = () => {
                 gap: "30px",
               }}
             >
-              <Box className="lang">
-                <LanguageIcon className="icon" />
-                <Box className="drop">
+              <Box className="lang" sx={{cursor :"pointer"}}>
+                <LanguageIcon className="icon"  onClick={() => {
+
+setLang(!lang)
+
+}} />
+                <Box className="drop" sx={{display : lang ? "block" : "none"}} >
                   <p
                     onClick={() => {
                       i18n.changeLanguage("en");

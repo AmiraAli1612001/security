@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Close } from "@mui/icons-material";
 import {
   Box,
@@ -17,7 +17,7 @@ import scanner from "../assets/images/scanner.svg";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import "../css/shares.css";
 import "../css/style.css";
-
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { useTranslation } from "react-i18next";
 
 const DefDrawer = (props) => {
@@ -36,29 +36,36 @@ const DefDrawer = (props) => {
     { text: t("contact"), path: "/contact" },
     { text: t("login"), path: "/login" },
   ];
+  var drop = document.getElementById("drop")
   let boxes = [
     {
       icon: eye,
-      title: "Cyber Platform",
+      title: t("cyber-platform") ,
       p: "Demystify Cyber Security is baked into everything we do, our platform is the perfect vehicle to help us deliver Cyber Serenity.",
       link: "LEARN MORE",
       path: "/cyber-platform",
     },
     {
-      icon: hand,
-      title: "Vulnerability Scanner",
+      icon: scanner,
+
+      title: t("vulnerability-scanner"),
       p: "Manage Internal & External Vulnerabilities, all reconciled against the Global Cyber Security Databases.",
       link: "LEARN MORE",
       path: "/vulnerability-scanner",
     },
     {
-      icon: scanner,
-      title: "Mobile Network Scanner",
+      icon: hand,
+
+      title: t("Mobile-Network-Scanner"),
       p: "Our Mobile Network scanner is the most advanced Cyber Utility in the Play Store and a top 10 common organic result for many Cyber Security.",
       link: "LEARN MORE",
       path: "/mobile-network",
     },
   ];
+
+
+  let [dropy , setDropy] = useState(false)
+
   return (
     <Drawer
       className="drawer"
@@ -66,7 +73,7 @@ const DefDrawer = (props) => {
         anchor="left"
       smooth="true"
       onClick={() => {
-        props.setNoneOrBlock("none");
+        // props.setNoneOrBlock("none");
       }}
       sx={{
         display: props.noneOrBlock,
@@ -85,7 +92,7 @@ const DefDrawer = (props) => {
       }}
     >
       <Box
-        sx={{ backgroundColor: "#663cb1", padding: "10px", textAlign: "right" }}
+        sx={{display :"flex", alignItems : "center",justifyContent :"space-between", backgroundColor: "#663cb1", padding: "10px", textAlign: "right" }}
       >
         <Close
           sx={{ cursor: "pointer" }}
@@ -93,25 +100,48 @@ const DefDrawer = (props) => {
             props.setNoneOrBlock("none");
           }}
         />
+          <p  style={{display : dropy ? "flex":"none"}}>{t("Produtcs")}</p>
+       
+        <KeyboardArrowLeftIcon  sx={{cursor : "pointer", display : dropy ? "flex":"none"}} onClick={() => {
+          
+          setDropy(false)
+        }}/>
+
+
       </Box>
 
       <Divider />
 
-      <Box className="menu">
+      <Box className="menu" onClick={() => {
+             setDropy(!dropy)
+                
+              }}>
         <Link
+            className="pro"
+
           style={{
             position: "relative",
             display: "flex",
             alignItems: "center",
+            
+          }}
+          onClick={() => {
+
+            drop.style.width = "240px"
+            console.log("hello")
+         
+              
+            
           }}
         >
           {t("products")}
           <NavigateNextIcon />
         </Link>
-        <Grid container className="dropdown">
+        <Grid container className="dropdown" id="drop" sx={{display : dropy ? "flex":"none"}}>
           {boxes.map((item) => {
             return (
               <Grid
+              sx={{color:"white" , fontSize :"25px"}}
                 item
                 md={4}
                 className="item"
@@ -141,7 +171,20 @@ const DefDrawer = (props) => {
       </Box>
 
       {list.map((item) => {
-        return <Link to={item.path}>{item.text}</Link>;
+        return (
+        
+        <Link   to={item.path}  onClick={() => {
+          
+      
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+
+        }}  >{item.text}</Link>
+        
+        
+        );
       })}
       <Link
         style={{
@@ -151,8 +194,19 @@ const DefDrawer = (props) => {
           display: "block",
           margin: "auto",
         }}
+       
         className="createA"
         to="/login"
+
+        onClick={() => {
+          
+      
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+
+      }} 
       >
         {t("create-account")}
       </Link>

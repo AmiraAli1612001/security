@@ -14,7 +14,7 @@ const Cyper = () => {
         <h2>{t("complete")}</h2>
         <Box className="links">
           <Link to="/login" style={{ transform: "translateY(25%)" }}>
-            {t("create-account")}
+            {t("create-small")}
           </Link>
           <Link to="/cyber-platform">{t("discover-more")}</Link>
         </Box>

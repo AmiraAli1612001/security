@@ -5,6 +5,7 @@
     box-sizing: border-box;
     text-wrap: wrap;
     flex-wrap: wrap;
+    
 }
 body {
     font-family: Poppins,sans-serif;
@@ -80,3 +81,21 @@ body {
     z-index: 100;
     
 } */
+
+
+.error {
+
+  position: relative !important;
+  
+}
+.error:before {
+  color: #f3f6f9 !important;
+  content: "404" !important;
+  font-size: 40vw !important;
+  left: 50% !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translate(-50%,-50%) !important;
+  width: 100% !important;
+  z-index: -1 !important;
+}

@@ -99,7 +99,7 @@ const Blog = () => {
           <Grid
             container
             sx={{ display: "flex",
-            alignItems: "center", justifyContent: "center", gap: "30px" }}
+            alignItems: "center", justifyContent: "center", gap: { xs :"10px", lg :"30px"} }}
           >
             {blog.map((item, index) => {
               return (

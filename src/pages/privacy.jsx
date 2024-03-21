@@ -180,7 +180,7 @@ const Privacy = () => {
         <h3>{t("privacy-p-70")} </h3>
         <p>{t("privacy-p-71")}</p>
 
-        <Table>
+        <Table sx={{display : {xs :"none" , lg :"block"}}}>
           <TableHead>
             <TableRow>
               <TableCell className="bold">{t("privacy-p-72")} </TableCell>

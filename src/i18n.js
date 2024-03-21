@@ -25,6 +25,7 @@ i18n.use(LanguageDetector)
       caches: ['localStorage'],
 
     },
+    
     lng: window.localStorage.getItem("i18nextLng"),
     interpolation: {
       escapeValue: false // react already safes from xss

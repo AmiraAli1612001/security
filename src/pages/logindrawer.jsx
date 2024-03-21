@@ -1,6 +1,6 @@
 // import { Close, Home, Login } from '@mui/icons-material';
 import { Box, Divider, Drawer, CardMedia } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import LanguageIcon from "@mui/icons-material/Language";
 import EmailIcon from "@mui/icons-material/Email";
@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 
 const Logindrawer = (props) => {
   const { t } = useTranslation();
+
 
   const list = [
     {
@@ -102,7 +103,15 @@ const Logindrawer = (props) => {
 
       {list.map((item) => {
         return (
-          <Link to={item.path}>
+          <Link to={item.path} onClick={() => {
+          
+      
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+
+        }} >
             {item.icon}
             {item.text}
           </Link>

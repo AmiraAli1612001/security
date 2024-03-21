@@ -88,7 +88,7 @@ const Mobile = () => {
             display: "flex",
             gap: "30px",
             justifyContent: "center",
-            padding: "40px",
+            padding:  {xs :"10px", lg  :"40px",},
             backgroundColor: "rgba(3, 12, 40, 0.6) ",
           }}
         >
@@ -101,7 +101,7 @@ const Mobile = () => {
                 className="item"
                 sx={{ height: { xs: "90vh", md: "80vh" } }}
               >
-                <Box className="layery">
+                <Box className="layery" >
                   {item.icon}
                   <h2>{item.h1} </h2>
                   <p className="one">{item.p}</p>

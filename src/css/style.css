@@ -19,7 +19,7 @@
 }
 
 .create {
-  width: 200px;
+  width: 240px !important;
   background-color: #663cb1 !important;
   padding: 20px 40px !important;
   border-radius: 30px !important;
@@ -94,15 +94,12 @@
   position: absolute;
   background-color:#663cb1;
   color: white;
-  width: 140px;
-  scale: 0;
+  width: 100px;
+  scale: 1;
   top: 60px;
   transition: 0.5s;
 }
-.lang:hover .drop {
-  transition: 0.5s;
-  scale: 1;
-}
+
 .lang .drop p {
   padding: 10px;
   cursor: pointer;
@@ -115,6 +112,7 @@
   transition: 1s !important;
 }
 .header header {
+  box-shadow: 0px 0px 0px transparent !important;
   background-color: transparent;
   transition: 1s ;
   position: fixed !important;
@@ -134,10 +132,11 @@
   border: 2px solid #512e8c !important;
   transition: 1s !important;
 }
-.dropdown {
+
+  .dropdown {
   width: 60vw !important;
   position: absolute !important;
-  display: flex;
+  display: none ;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -146,15 +145,16 @@
   transform: translateX(-20vw);
   background-color: black;
   /* display: none !important; */
-  scale: 0 !important;
+  /* scale: 0 !important; */
   transition: 1s !important;
 }
-.menu:hover .dropdown {
+
+/* .menu:hover .dropdown {
   display: flex !important;
   top: 60px !important;
   transition: 1s !important;
   scale: 1 !important;
-}
+} */
 .dropdown .item {
   display: flex !important;
   padding: 20px;
@@ -167,7 +167,7 @@
   color: white;
 }
 .dropdown .item h4 {
-  font-size: 20px !important;
+  font-size: 15px !important;
   font-weight: bold;
   margin: 20px auto;
 }
@@ -255,7 +255,17 @@
 .css-146xcat {
   width: 100% !important;
 }
-.video a:nth-child(1) , .blog .grid .left .item .two,
+
+.video a:nth-child(1)  {
+  background-color: #663cb1;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 1s;
+  font-size: 14px;
+}
+ .blog .grid .left .item .two,
 .about-discover a:nth-child(1),
 .aboutBox a:nth-child(1),
 .sections a,
@@ -289,9 +299,11 @@
 .video a:nth-child(2) {
   font-size: 15px !important;
 }
-
+.css-1qgz3k2 {
+  gap: 20px !important;
+}
 .layer {
-  background-color: rgba(0, 0, 0, 0.518);
+  background-color: rgba(0, 0, 0, 0.318);
   position: absolute;
   left: 0px;
   top: 0px;
@@ -307,7 +319,7 @@
   display: flex;
   align-items: center;
   background-image: url("../assets/images/Artboard.webp");
-  height: 50vh;
+  min-height: 50vh;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
@@ -457,7 +469,7 @@
 }
 .image img,
 .about-image img {
-  width: 380px !important;
+  max-width: 380px !important;
 }
 .contact {
   min-height: 100vh;
@@ -478,7 +490,7 @@
 .contact .grid form {
   display: flex;
   flex-direction: column;
-  border: 3px solid white;
+  border: 1.5px solid white;
   padding: 30px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.439);
@@ -497,7 +509,7 @@ form .submit:hover {
   background-color: #512e8c;
   transition: 0.5s;
 }
-form h1 {
+.contact form h1 {
   margin: 20px 0px;
   font-size: 28px !important;
 }
@@ -717,6 +729,49 @@ sections */
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 950px) {
+  .contact .grid form  {
+    padding: 15px !important;
+  }
+  .video a:nth-child(1) , .blog .grid .left .item .two,
+  .about-discover a:nth-child(1),
+  .aboutBox a:nth-child(1),
+  .sections a,
+  .comma a,
+  .who a  , .protect a , .labtop a:nth-child(1) {
+  margin-left:10px !important ;
+  margin-right:10px  !important;
+}
+
+  .blog .grid {
+    padding: 0px 20px !important;
+  }
+  .blog .back {
+    background-image: url("https://www.roboshadow.com/hubfs/Robo%20Shadow%20Blog.webp") ;
+     
+      border-radius: 10px;
+      box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.7);
+      margin:0px !important;
+      margin: auto !important;
+      max-width: 300px;
+      padding: 30px !important;
+    color: white;
+    display: flex;
+    align-items: center;
+  
+  }
+
+  .blog .back .parent {
+    background-image: url("") !important;
+
+  } 
+
+
+
+
+  ul {
+    margin: 0px 10px !important;
+  }
+ 
   .video h1 {
     font-size: 50px;
   }
@@ -942,7 +997,8 @@ sections */
 }
 
 .login {
-  min-height: 100vh;
+  min-height: 100vh !important;
+  margin: auto !important;
   background-image: url("../assets/images/loginBack.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -973,8 +1029,8 @@ sections */
   color: white;
   font-size: 15px;
 }
-.login .btn {
-  width: 400px;
+.login .btn  {
+  max-width: 400px !important;
   position: relative;
   background-color: #1e1e1e80;
   display: flex;
@@ -991,7 +1047,7 @@ sections */
   align-items: center;
 }
 .login .btn button {
-  width: 230px;
+  width: 250px;
   font-size: 13px;
   font-weight: bold;
   color: white;
@@ -1003,7 +1059,7 @@ sections */
   text-transform: capitalize;
 }
 .login .btn button span {
-  width: 190px;
+  width: 210px;
   display: inline-block;
   padding-left: 10px;
 }
@@ -1294,6 +1350,10 @@ blog top */
 
 }
 
+.model-one  {
+  max-width: 400px !important;
+
+}
 
 
 
@@ -1390,23 +1450,23 @@ ul li {
   
   
 }
-.lay .layery .one {
-  margin-bottom: 70px !important;
-}
+
 .lay .layery {
   left: 0px;
-  top: 0px;
   padding: 40px;
 position: absolute;
-  transform: translateY(58%);
   width: 100%;
-  height: 100%;
+  bottom: 40px;
+  height:180px;
+   overflow :hidden
 
 
 }
 .lay .item:hover .layery{
-  transform: translateY(0);
+  height: 100%;
   transition: 0.5s;
+  bottom: 0px;
+
   background-color: #663cb1;
 
 }
@@ -1431,18 +1491,21 @@ position: absolute;
 }
 
 .drawer .dropdown {
-  scale: 1;
+  scale: 1 !important;
   width: 240px !important;
+  top:42px !important;
   right: 0px !important;
   transform: translateX(0vw) !important;
-  display: flex !important;
   flex-direction: column !important;
+  background-color: #151b23;
+  height: 65vh;
 
 
 }
 .drawer .dropdown .item {
 
   padding: 10px !important;
+
   
   width: 100% !important;
 }
@@ -1494,7 +1557,7 @@ cursor: pointer;
   display: flex;
 }
 .model-one input {
-  width: 300px;
+  max-width: 250px !important;
   border: none !important;
   outline: none !important;
   margin-left: 5px;
@@ -1603,11 +1666,11 @@ transition: 0.5s;
   height: 100vh !important;
 }
 
-.css-1cxcwo2-MuiModal-root-MuiDrawer-root .MuiDrawer-paper {
+.css-1cxcwo2-MuiModal-root-MuiDrawer-root .MuiDrawer-paper  , .css-wf16b5{
   background-color: #151b23 !important;
 }
 
-.css-1cxcwo2-MuiModal-root-MuiDrawer-root .MuiDrawer-paper  a {
+.css-1cxcwo2-MuiModal-root-MuiDrawer-root .MuiDrawer-paper  a , .css-wf16b5 a {
   color: white !important;
   padding: 20px 40px !important;
   text-decoration: none !important;
@@ -1617,8 +1680,23 @@ transition: 0.5s;
 
 }
 
-.css-1cxcwo2-MuiModal-root-MuiDrawer-root .MuiDrawer-paper  a:hover {
+.css-1cxcwo2-MuiModal-root-MuiDrawer-root .MuiDrawer-paper  a:hover  , .css-wf16b5 a:hover{
   color:  #6f41c0 !important;
   transition: 0.5s;
 
+}
+
+.contact img {
+  width: 100% !important;
+}
+
+
+
+.err-btn:hover {
+  background-color: rgba(20, 176, 155, 0.7) !important;
+  transition: 0.5s;
+}
+.css-1kwqgbq-MuiCardMedia-root {
+  width: 40px !important;
+  height: auto !important;
 }

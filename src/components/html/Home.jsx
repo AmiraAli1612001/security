@@ -49,7 +49,7 @@ const Home = (props) => {
             {props.home.text}
           </Typography>
           <Link to="/login" className="create">
-            {t("create-account")}
+            {t("create-small")}
           </Link>
         </Grid>
         <Grid item xs={10} md={5}>

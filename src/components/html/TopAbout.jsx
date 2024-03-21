@@ -22,7 +22,7 @@ const TopAbout = () => {
                 });
               }}
             >
-              {t("create-account")}
+              {t("create-small")}
             </Link>
             <Link
               to="/cyber-platform"

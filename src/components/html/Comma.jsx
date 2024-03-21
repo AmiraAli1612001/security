@@ -24,7 +24,7 @@ const Comma = () => {
         <h1>
           {t("comma-p")}
         </h1>
-        <Link to="/login">{t("create-account")}</Link>
+        <Link to="/login">{t("create-small")}</Link>
       </Box>
     );
 }

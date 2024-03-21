@@ -18,7 +18,7 @@ const Who = () => {
         <p>          {t("who-p-4")}
 </p>
 
-        <Link to="/login">{t("create-account")}</Link>
+        <Link to="/login">{t("create-small")}</Link>
       </Box>
     );
 }

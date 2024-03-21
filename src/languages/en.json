@@ -766,5 +766,7 @@
 "recover-pass" :"Recover Password",
 "recover-p-1" :"Enter your registered email address and press 'Send'.",
 "recover-p-2" :"  We will send instructions explaining how to reset your password to your email address."
-
+,
+"create-small" : "Create Account" ,
+"Produtcs" : "Products"
 }

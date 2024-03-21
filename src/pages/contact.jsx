@@ -28,7 +28,7 @@ const Contact = () => {
         // setPermanentOrTemporary={setPermanentOrTemporary}
         // drawerDir={drawerDir}
       />
-      <Box className="contact">
+      <Box className="contact" >
         <Grid container className="grid">
           <Grid item xs={10} lg={4.5} className="left">
             <Typography variant="h1" color="initial">
@@ -42,7 +42,7 @@ const Contact = () => {
           </Grid>
           <Grid item xs={10} md={4.5}>
             <form>
-              <h1>{t("get-touch")}</h1>
+              <h1 >{t("get-touch")}</h1>
               <label htmlFor="">
                 {t("name")}
                 <span>*</span>
@@ -142,7 +142,7 @@ const Contact = () => {
 
       <Box className="image">
         <CardMedia
-          sx={{ marginLeft: { xs: "0px", lg: "200px" } }}
+          sx={{ margin:"auto" }}
           component="img"
           image={img}
         />
